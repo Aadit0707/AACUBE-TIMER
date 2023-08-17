@@ -1,7 +1,5 @@
 let TimeText = document.getElementById("TimeText");
 let ms=0;
-let cs=0;
-let ds=0;
 let s=0;
 let m=0;
 let TimerOn = false;
@@ -42,6 +40,9 @@ function processTimer(){
 }
 
 function start(){
+    ms = 0;
+    s = 0;
+    m = 0;
     clearInterval(processInterval);
     TimerOn=true;
     processInterval = setInterval(processTimer,10);
